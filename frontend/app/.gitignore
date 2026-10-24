@@ -1,0 +1,18 @@
+# Node.js / Next.js
+**/node_modules/
+**/.next/
+**/out/
+
+# Python / FastAPI
+**/.venv/
+**/__pycache__/
+*.pyc
+
+# IDE
+**/.idea/
+.vscode/
+
+# Environment
+.env
+.env.*
+!.env.example
