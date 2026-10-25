@@ -1,0 +1,56 @@
+{
+  "job": "DRG",
+  "level": 100,
+  "patch": "7.10",
+  "source": "prototype",
+  "skills": [
+    {
+      "id": "drg_test_gcd_01",
+      "name": "용기사 테스트 GCD",
+      "gcd_type": "GCD",
+      "required_level": 1,
+      "potency": 300,
+      "base_recast_seconds": 2.5,
+      "resource_changes": [
+        {
+          "resource_key": "test_gauge",
+          "amount": 10,
+          "trigger": "on_hit"
+        }
+      ]
+    },
+    {
+      "id": "drg_test_combo_02",
+      "name": "용기사 테스트 콤보",
+      "gcd_type": "GCD",
+      "required_level": 50,
+      "potency": 200,
+      "combo_from": "drg_test_gcd_01",
+      "combo_potency": 450,
+      "base_recast_seconds": 2.5,
+      "resource_requirements": {
+        "test_gauge": 10
+      },
+      "resource_changes": [
+        {
+          "resource_key": "test_gauge",
+          "amount": -10,
+          "trigger": "on_use"
+        }
+      ]
+    },
+    {
+      "id": "drg_test_buff_03",
+      "name": "용기사 테스트 파티 버프",
+      "gcd_type": "oGCD",
+      "required_level": 70,
+      "potency": 0,
+      "cooldown_seconds": 120,
+      "buff": {
+        "duration_seconds": 20,
+        "target": "party",
+        "crit_rate_bonus": 0.1
+      }
+    }
+  ]
+}
