@@ -23,3 +23,9 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+backend/data/source/
+backend/data/localization/generated/
+
+.\data\localization\generated\ko_7.57.json
+.\data\source\Action.csv
