@@ -1,0 +1,25 @@
+
+# Python
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# PyCharm / IDE
+.idea/
+**/.idea/
+.vscode/
+
+# Next.js / Node.js
+**/node_modules/
+**/.next/
+**/out/
+
+# macOS
+.DS_Store
+
+# Environment Variables
+.env
+.env.*
+!.env.example
