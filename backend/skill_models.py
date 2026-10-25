@@ -107,14 +107,15 @@ class Skill(BaseModel):
     # -------------------------
     # 기술 기본 정보
     # -------------------------
-
     id: str = Field(min_length=1)
+
+    # XIVAPI 영어 기술명
     name: str = Field(min_length=1)
 
-    # GCD / oGCD 구분
-    gcd_type: SkillType
+    # 공식 한국어 기술명
+    name_ko: str | None = None
 
-    # 기술 습득 레벨
+    gcd_type: SkillType
     required_level: int = Field(ge=1)
 
     # -------------------------
