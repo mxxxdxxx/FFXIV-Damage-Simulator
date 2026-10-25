@@ -1,6 +1,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from routers.skills import router as skills_router
 
 # FastAPI 애플리케이션 생성
 app = FastAPI(
@@ -8,6 +9,8 @@ app = FastAPI(
     description="FFXIV 스킬 로테이션 및 기대 피해량 계산 API",
     version="0.1.0"
 )
+
+app.include_router(skills_router)
 
 # Next.js 프론트엔드와 통신하기 위한 CORS 설정
 app.add_middleware(
